@@ -2,6 +2,7 @@
 
 This repository will contain the file for controlling stepper motors using a Raspberry pi GPIO and TB6560 drivers
 
-A constant clock signal (clock_signal.py)
-
-Activating/deactivating specfic signal for starting/stopping movement or changing rotation (only_motors_control.py)
+|program|function|
+|---|---|
+|clk_signal.py|Generates a constant frequency clock signal (square wave)|
+|only_motors_control.py|Allows for controlling individual Enable (start/stop) and Direction (changes direction) pin on driver|
