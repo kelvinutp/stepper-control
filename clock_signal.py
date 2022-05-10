@@ -3,13 +3,17 @@ import pigpio
 
 pi=pigpio.pi()
 
+#GPIO pin
 clk=18
+
+#desired frecuency
 fre=1000
 
-#inicia el reloj
+#Start clock signal
 pi.hardware_PWM(clk,fre,500000)
 
 time.sleep(10)
-#detine el reloj
+
+#stops clock signal
 pi.hardware_clock(clk,0)
 
