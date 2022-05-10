@@ -4,4 +4,4 @@ This repository will contain the file for controlling stepper motors using a Ras
 
 A constant clock signal (clock_signal.py)
 
-Activating/deactivating specfic signal for starting/stopping movement or changing rotation (only_motors.py)
+Activating/deactivating specfic signal for starting/stopping movement or changing rotation (only_motors_control.py)
