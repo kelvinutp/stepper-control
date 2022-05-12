@@ -28,12 +28,12 @@ pi.hardware_PWM(clk,freq,500000)
 c=pin[0]
 e=0
 while c in pin:
+    #print pin and state
     for a in state:
         print("{:<2}: {}".format(a,state[a]))
 
-    c=int(input("pin: "))
-    e=time.time()*1000
     #changing desired pin state
+    c=int(input("pin: "))
     try:
         d=not(state[c])
         state[c]=d
