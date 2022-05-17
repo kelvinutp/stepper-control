@@ -12,7 +12,7 @@ class gryphon:
         ena=    GPIO enable\n
         enca=   GPIO encoder A\n
         encb=   GPIO encoder B\n
-        rango=  la totalidad de rango angular disponible
+        rango=  la totalidad de rango angular disponible\n
         ls    GPIO limit switches (maximo 2)\n
         """
         self.dire=dire
