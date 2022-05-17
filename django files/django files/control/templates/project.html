@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<html>
+    <style>
+        p{
+            color:blue;
+            text-align: center;
+        }
+        
+        </style>
+    <head>
+        <h1>Presentacion</h1>
+    </head>
+    
+    <body>
+        <h5>{{title}}</h5>
+        <p>{{msg}}</p>
+        <a href="{% url 'controles'%}" class="btn btn-primary">
+            {{boton}}
+        </a>
+    </body>
+    <script>
+
+    </script>
+</html>
+{% endblock %}

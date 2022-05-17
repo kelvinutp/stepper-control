@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<html>
+    <form action="" method="POST"></form>
+    <h1>Controles</h1>
+    <body>
+        <p>Seccion de controles, se colocara un par 
+            de botones por motor, 1 para movimiento horario y otro para movimiento antihorario
+            Cada motor tendra encabezado su numero de motor
+            se debe colocar una imagen que muestre a que motor corresponde
+        </p>
+        {% for a in motors %}
+            <p>
+                Motor {{a}}
+            </p>
+            <a href="{%url 'limits' a%}" class="btn btn-primary">
+                calibracion
+            </a>
+            <a href="{%url 'moveCW' a 'cw'%}" class="btn btn-primary">
+                sentido CW
+            </a>
+            <a href="{%url 'moveCW' a 'ccw'%}" class="btn btn-primary">
+                sentido CCW
+            </a>
+            <label>
+                Grados a desplazarse: 
+            </label>
+            <input id="grados">
+            <a href="{%url 'vari' a%}" class="btn btn-primary">
+                variacion de frecuencia
+            </a>
+            <a href="{%url 'const' a%}" class="btn btn-primary">
+                sin variacion de frecuencia
+            </a><br> 
+            
+        {% endfor %}
+
+        <a href="{%url 'intro'%}" class="btn btn-primary">
+            go back
+        </a>
+        <a href="{%url 'salir'%}" class="btn btn-primary">
+            Fin
+        </a>
+    </body>
+</html>
+{% endblock %}
